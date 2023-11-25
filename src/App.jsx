@@ -1,5 +1,11 @@
+import AppLayout from "./ui/AppLayout";
+
 function App() {
-  return <div className="">Hello world</div>;
+  return (
+    <div className="">
+      <AppLayout />
+    </div>
+  );
 }
 
 export default App;
