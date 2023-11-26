@@ -1,18 +1,34 @@
+import { HiMiniLanguage } from "react-icons/hi2";
 import Button from "./Button";
+import { Link } from "react-router-dom";
+import Avatar from "./Avatar";
+import { TbBrandLine, TbBell, TbUser, TbSearch } from "react-icons/tb";
 
 function Header() {
   return (
-    <div className="flex items-center justify-between p-4">
+    <div className="flex items-center justify-between p-4 container mx-auto">
       <div>
-        <img src="/logo.svg" alt="azul" />
+        <Link to="/">
+          <img src="/logo.svg" alt="azul" />
+        </Link>
       </div>
-      <div>
+      <div className="flex items-center gap-14">
         <ul className="flex items-center gap-4">
           <li>
-            <Button type="outline">Sign In</Button>
+            <Button type="outline" to="/login">
+              Sign In
+            </Button>
           </li>
           <li>
-            <Button type="primary">Sign Up</Button>
+            <Button type="primary" to="/register">
+              Sign Up
+            </Button>
+          </li>
+          <li>
+            <HiMiniLanguage
+              size={24}
+              className="text-textColor cursor-pointer"
+            />
           </li>
         </ul>
       </div>
